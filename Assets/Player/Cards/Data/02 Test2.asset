@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
-  m_Name: Fireball
+  m_Name: 02 Test2
   m_EditorClassIdentifier: 
-  cardID: 3
-  cardName: Fireball
+  cardID: 1
+  cardName: AnotherCard
   rarity: 0
-  description: Deal 20 dmg
-  splashArt: {fileID: 0}
+  description: Moredescription
+  splashArt: {fileID: 21300000, guid: 34da354883ae4154b9c8fd26466e8c21, type: 3}

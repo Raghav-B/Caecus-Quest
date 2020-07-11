@@ -7,6 +7,8 @@ public class Character {
     private float health;
     private float maxArmor;
     private float armor;
+
+    private int rootTurns = 0;
     
     public float getHealth() {
         return health;
@@ -39,6 +41,14 @@ public class Character {
         } else {
             health += healAmount;
         }
+    }
+
+    public void setRootTurns(int rootTurns) {
+        this.rootTurns = rootTurns;
+    }
+
+    public int getRootTurns() {
+        return rootTurns;
     }
 
     public virtual void die() {

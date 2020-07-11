@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
-  m_Name: Test
+  m_Name: 07 Rain of Embers
   m_EditorClassIdentifier: 
-  cardID: 0
-  cardName: TestName
-  description: TestDescription
-  splashArt: {fileID: 21300000, guid: fbbe7a022ae17bf4ea6db2556af57c78, type: 3}
+  cardID: 7
+  cardName: Rain of Embers
+  rarity: 1
+  description: Deal 5 burn damage
+  splashArt: {fileID: 0}

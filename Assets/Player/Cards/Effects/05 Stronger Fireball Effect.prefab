@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba09364f0f2296409601a55fbb0a47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 40
-  chanceToHit: 20
   radius: 1
+  damage: 40
+  chanceToHit: 0.2
 --- !u!1001 &5905834500772817647
 PrefabInstance:
   m_ObjectHideFlags: 0

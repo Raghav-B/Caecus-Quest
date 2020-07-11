@@ -151,8 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c529cca7aef156b4fa8b8969b2c091cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetDelta: {x: 0, y: 0, z: 0}
-  targetLocation: {x: 0, y: 0, z: 0}
   size: 0
   tileIndicator: {fileID: 4489940086942968711, guid: 093ceef37dc1f9e40b85c3536292df31,
     type: 3}
@@ -1885,6 +1883,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardHandUI: {fileID: 1018503074}
   CardList:
+  - {fileID: 1287641874870739333, guid: 27dfdf2422b0c244ca62227ab4048894, type: 3}
+  - {fileID: 4671943553072138739, guid: 3657669e26e54ff4d8ca4d0fdb9fd3cc, type: 3}
+  - {fileID: 7566030611254561539, guid: 90080060a38837647ae8ce4b3f4e94c6, type: 3}
+  - {fileID: 1287641874870739333, guid: 27dfdf2422b0c244ca62227ab4048894, type: 3}
   - {fileID: 1287641874870739333, guid: 27dfdf2422b0c244ca62227ab4048894, type: 3}
 --- !u!4 &2126172756
 Transform:
