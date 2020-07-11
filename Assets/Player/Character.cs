@@ -52,6 +52,17 @@ public class Character : MonoBehaviour {
         return rootTurns;
     }
 
+    /**
+     * dir:
+     *  0, UP
+     *  1, LEFT
+     *  2, DOWN
+     *  3, RIGHT
+     */
+    public void doMovement(int dir) {
+        
+    }
+
     public virtual void die() {
 
     }

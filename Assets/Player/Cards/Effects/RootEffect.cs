@@ -24,13 +24,10 @@ public class RootEffect : CardEffect {
                 }
             }
 
-            int targetChoice = Random.Range(0, characterList.Count);
-            if (colliders[targetChoice] != null) {
+            if (characterList.Count != 0) {
+                int targetChoice = Random.Range(0, characterList.Count);
                 colliders[targetChoice].GetComponent<Character>().setRootTurns(rootTurns);
             }
-            
         }
-
-        
     }
 }
