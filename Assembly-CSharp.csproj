@@ -63,14 +63,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CardDisplay.cs" />
+    <Compile Include="Assets\Controllers\DevController.cs" />
+    <Compile Include="Assets\Controllers\MouseController.cs" />
+    <Compile Include="Assets\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\Controllers\TargettedTileController.cs" />
     <Compile Include="Assets\Player\Cards\Card.cs" />
+    <Compile Include="Assets\Player\Cards\CardDataScript.cs" />
     <Compile Include="Assets\Player\Cards\DeckController.cs" />
-    <Compile Include="Assets\Player\DevController.cs" />
-    <Compile Include="Assets\Player\PlayerController.cs" />
+    <Compile Include="Assets\Player\Cards\Effects\CardEffect.cs" />
+    <Compile Include="Assets\Player\Cards\Effects\PrintTestEffect.cs" />
+    <Compile Include="Assets\Player\Cards\ICardData.cs" />
+    <Compile Include="Assets\Player\Cards\UIElements\CardDisplay.cs" />
+    <Compile Include="Assets\Player\Cards\UIElements\CardMouseBehaviour.cs" />
     <Compile Include="Assets\Player\PlayerHealthBox.cs" />
-    <Compile Include="Assets\Player\TargettedTileController.cs" />
-    <Compile Include="Assets\Scripts\MouseController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
