@@ -18,13 +18,20 @@ public class EnemyController : MonoBehaviour
             instance = this;
         }
 
+        UpdateEnemyList();
+
+        //Debug.Log("Found enemy objects:" + enemyList.Count);
+    }
+
+    public bool UpdateEnemyList() {
         enemyList = new List<Enemy>();
         GameObject[] objList = FindObjectsOfType<GameObject>();
         foreach (GameObject obj in objList) {
             if (obj.tag == "Enemy") enemyList.Add(obj.GetComponent<Enemy>());
         }
 
-        //Debug.Log("Found enemy objects:" + enemyList.Count);
+        if (enemyList.Count == 0) return false;
+        return true;
     }
 
     public void ResolveAIAll() {

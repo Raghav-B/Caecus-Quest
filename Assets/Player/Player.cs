@@ -4,21 +4,19 @@ using UnityEngine;
 
 public class Player : Character {
 
-    private static Player player;
+    private static Player instance;
 
     public float startHealth = 10;
     public float startArmor = 5;
 
-    private Player() {
-        setHealth(startHealth);
-        setArmor(startArmor);
-    }
-
-    public static Player getInstance() {
-        if (player == null) {
-            player = new Player();
+    public static Player Instance { get { return instance; } }
+    void Awake() {
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
         }
-        return player;
+        else {
+            instance = this;
+        }
     }
 
     public void damageEnemy(Enemy target, float spellDamage) {

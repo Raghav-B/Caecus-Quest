@@ -8,9 +8,9 @@ public class Enemy : Character {
 
     public void damagePlayer(int damage) {
 
-        bool isPlayerAlive = Player.getInstance().takeDamage(damage);
+        bool isPlayerAlive = Player.Instance.takeDamage(damage);
         if (!isPlayerAlive) {
-            Player.getInstance().die();
+            Player.Instance.die();
         }
     }
 

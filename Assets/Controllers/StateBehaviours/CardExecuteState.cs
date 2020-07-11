@@ -9,6 +9,9 @@ public class CardExecuteState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
         GameController.Instance.ApplyEffects();
+        if(EnemyController.Instance.UpdateEnemyList()) {
+            GameController.GameStateMachine.SetTrigger("PlayerWon");
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

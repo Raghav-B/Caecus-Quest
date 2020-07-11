@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,14 @@ public class AIResolutionState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (EnemyController.Instance.PollAIResolved()) {
             //Debug.Log("Controller reports resolved");
-            animator.SetTrigger("AiResolved");
+            if (Player.Instance.getHealth() <= Mathf.Epsilon) {
+                animator.SetTrigger("PlayerDied");
+            }
+            
+            else {
+                animator.SetTrigger("AiResolved");
+            }
+            
         }
     }
 

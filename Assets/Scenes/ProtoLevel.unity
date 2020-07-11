@@ -344,8 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577ed89b8f3108f49b30410a157616f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startHealth: 0
-  startArmor: 0
+  startHealth: 10
+  startArmor: 10
 --- !u!4 &269359484 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: efa8088d49684bf478d4ecb8d30ff02b,
