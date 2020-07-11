@@ -23,13 +23,22 @@ public class EnemyController : MonoBehaviour
         foreach (GameObject obj in objList) {
             if (obj.tag == "Enemy") enemyList.Add(obj.GetComponent<Enemy>());
         }
+
+        //Debug.Log("Found enemy objects:" + enemyList.Count);
     }
 
     public void ResolveAIAll() {
+        //Debug.Log("Resolving moves");
         foreach (Enemy enemy in enemyList) {
             enemy.Move();
         }
+    }
 
-        GameController.GameStateMachine.SetTrigger("AiResolved");
+    public bool PollAIResolved() {
+        foreach(Enemy enemy in enemyList) {
+            if (!enemy.moveResolved) return false;
+        }
+
+        return true;
     }
 }

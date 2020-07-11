@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : Character {
 
+    public bool moveResolved = true;
+
     public void damagePlayer(int damage) {
 
         bool isPlayerAlive = Player.getInstance().takeDamage(damage);
