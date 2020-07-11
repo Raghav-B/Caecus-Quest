@@ -7,7 +7,7 @@ public class Player : Character {
     private static Player player;
 
     [SerializeField]
-    private float maxHealth;
+    private float maxHealth = 3;
     [SerializeField]
     private float startHealth;
     [SerializeField]

@@ -8,6 +8,12 @@ public class TargettedTileController : MonoBehaviour
     public int size = 0;
     public GameObject tileIndicator;
     public float delay = 0.5f;
+    
+        [SerializeField] public int minX = 0;
+        [SerializeField] public int maxX = 10;
+        [SerializeField] public int minY = 0;
+        [SerializeField] public int maxY = 10;
+
 
     private float lastCall;
 
@@ -21,6 +27,13 @@ public class TargettedTileController : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void changeRandomPos() {
+        int newX = Random.Range(minX, maxX + 1);
+        int newY = Random.Range(minY, maxY + 1);
+
+        transform.position = new Vector3(newX, 0, newY);
     }
 
     public void changePos(Vector3 targetLocation) {

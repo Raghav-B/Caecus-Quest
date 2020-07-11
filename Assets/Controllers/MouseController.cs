@@ -34,8 +34,9 @@ public class MouseController : MonoBehaviour
     private void moveTileAim() {
 
         Vector3 targetPos = new Vector3(Mathf.RoundToInt(worldPosition.x), 0f, Mathf.RoundToInt(worldPosition.z));
-        Debug.Log("Target:" + targetPos);
-        tileIndicatorScript.changePos(targetPos);
+        //Debug.Log("Target:" + targetPos);
+        tileIndicatorScript.changeRandomPos();
+        //tileIndicatorScript.changePos(targetPos);
 
     }
  

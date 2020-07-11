@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character {
+public class Character : MonoBehaviour {
     private float maxHealth;
     private float health;
     private float maxArmor;
