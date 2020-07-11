@@ -63,11 +63,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CardDisplay.cs" />
+    <Compile Include="Assets\Player\Cards\Card.cs" />
+    <Compile Include="Assets\Player\Cards\DeckController.cs" />
     <Compile Include="Assets\Player\DevController.cs" />
     <Compile Include="Assets\Player\PlayerController.cs" />
     <Compile Include="Assets\Player\PlayerHealthBox.cs" />
+    <Compile Include="Assets\Player\TargettedTileController.cs" />
     <Compile Include="Assets\Scripts\MouseController.cs" />
-    <Compile Include="Assets\TargettedTileController.cs" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
