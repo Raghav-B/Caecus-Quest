@@ -2,3 +2,7 @@
 **/Library
 **/.vs
 **/obj/Debug
+**/Packages
+GMTK Game Jam.sln
+GMTK Hackathon.sln
+Assembly-Csharp.csproj
