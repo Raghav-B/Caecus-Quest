@@ -21,7 +21,7 @@ public class MouseController : MonoBehaviour
         }
 
         if (Input.GetMouseButtonDown(0)) {
-
+            moveTileAim();
         }
     }
 

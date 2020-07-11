@@ -17,6 +17,17 @@ public class DeckController : MonoBehaviour {
         }
     }
 
+    public List<CardEffect> GetCardEffects(int cardID) {
+        foreach (GameObject card in CardList) {
+            CardDataScript currCard = card.GetComponent<CardDataScript>();
+            if (currCard.GetCard().cardID == cardID) {
+                return currCard.cardEffects;
+            }
+        }
+
+        return null;
+    }
+
     // Update is called once per frame
     void Update()
     {

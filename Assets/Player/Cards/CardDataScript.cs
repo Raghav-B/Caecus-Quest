@@ -7,7 +7,7 @@ public class CardDataScript : MonoBehaviour, ICardData
 {
 
     public Card cardInfo;
-    public List<CardEffect> cardEffects = new List<CardEffect>()    ;
+    public List<CardEffect> cardEffects = new List<CardEffect>();
     public void ExecuteEffect() {
         Debug.Log("Test card effect execution");
     }

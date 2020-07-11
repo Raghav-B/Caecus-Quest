@@ -8,6 +8,7 @@ public class CardMouseBehaviour : MonoBehaviour,
     IPointerEnterHandler, 
     IPointerExitHandler
 {
+    public GameController gameController;
 
     private int siblingIndex;
     public void OnPointerEnter(PointerEventData eventData) {
@@ -33,5 +34,7 @@ public class CardMouseBehaviour : MonoBehaviour,
         CardDisplay cardDisp = gameObject.GetComponent<CardDisplay>();
         Card card = cardDisp.card;
         int cardID = card.cardID;
+
+        gameController.ApplyEffects(cardID);
     }
 }
