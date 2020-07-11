@@ -5,7 +5,7 @@ using UnityEngine;
 public abstract class CardEffect : MonoBehaviour
 {
 
-    public int radius = 1;
+    public float radius = 0.5f;
     public virtual void ExecuteEffect(Collider[] colliders) {
     }
 }
