@@ -8,7 +8,7 @@ public class CardMouseBehaviour : MonoBehaviour,
     IPointerEnterHandler, 
     IPointerExitHandler
 {
-    public GameController gameController;
+    private GameController gameController = GameController.Instance;
 
     private int siblingIndex;
     public void OnPointerEnter(PointerEventData eventData) {
@@ -30,11 +30,12 @@ public class CardMouseBehaviour : MonoBehaviour,
 
     public void OnPointerClick(PointerEventData eventData) {
         //Debug.Log("Pointer Click");
-
-        CardDisplay cardDisp = gameObject.GetComponent<CardDisplay>();
-        Card card = cardDisp.card;
-        int cardID = card.cardID;
-
-        gameController.ApplyEffects(cardID);
+        if (GameController.GameStateMachine.GetCurrentAnimatorStateInfo(0).IsName("Card Pick")) {
+            CardDisplay cardDisp = gameObject.GetComponent<CardDisplay>();
+            Card card = cardDisp.card;
+            GameController.Instance.SetCardIDExecute(card.cardID);
+            GameController.GameStateMachine.SetTrigger("CardPicked");
+            GetComponent<CardDisplay>().toggleTransparency();
+        }
     }
 }

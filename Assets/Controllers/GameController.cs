@@ -7,14 +7,27 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private static GameController gameController;
+    private static GameController instance;
+    private static Animator gameStateMachine;
+    
     public GameObject Target;
+    
     private DeckController deckController;
     private int cardIDExecute;
+
+    public static GameController Instance { get { return instance; } }
+    public static Animator GameStateMachine { get { return gameStateMachine; } }
 
     // Start is called before the first frame update
     void Awake()
     {
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
+        } else {
+            instance = this;
+        }
+
+        gameStateMachine = GetComponent<Animator>();
 
         deckController = GetComponent<DeckController>();
     }
@@ -25,8 +38,12 @@ public class GameController : MonoBehaviour
         
     }
 
-    public void ApplyEffects(int cardID) {
-        List<CardEffect> effectsList = deckController.GetCardEffects(cardID);
+    public void SetCardIDExecute(int id) {
+        cardIDExecute = id;
+    }
+
+    public void ApplyEffects() {
+        List<CardEffect> effectsList = deckController.GetCardEffects(cardIDExecute);
         foreach(CardEffect effect in effectsList) {
             Debug.Log("Radius:" + effect.radius);
 
@@ -34,5 +51,7 @@ public class GameController : MonoBehaviour
             Debug.Log("colliders:" + colliders.Length);
             effect.ExecuteEffect(colliders);
         }
+
+        GameStateMachine.SetTrigger("CardEffectEnded");
     }
 }

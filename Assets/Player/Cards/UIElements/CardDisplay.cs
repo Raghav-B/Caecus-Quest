@@ -12,12 +12,20 @@ public class CardDisplay : MonoBehaviour
     public Text description;
     public Image splashArt;
     public Image background;
-    // Start is called before the first frame update
-    void Start()
+
+    private bool isTransparent = false;
+    public void RefreshCardInfo()
     {
         cardName.text = card.cardName;
         description.text = card.description;
         if (card.splashArt != null) splashArt.sprite = card.splashArt;
         
     }
+    
+    public void toggleTransparency() {
+        GetComponent<CanvasGroup>().alpha = isTransparent ? 1 : 0;
+        isTransparent = !isTransparent;
+
+    }
+
 }

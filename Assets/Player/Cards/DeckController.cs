@@ -6,10 +6,18 @@ public class DeckController : MonoBehaviour {
     
     public GameObject CardHandUI;
     public List<GameObject> CardList;
+
+    private static DeckController instance;
+    public static DeckController Instance { get { return instance; } }
     // Start is called before the first frame update
     void Awake()
     {
-        PopulateHand();
+        if (instance != null && instance != this) {
+            Destroy(this.gameObject);
+        }
+        else {
+            instance = this;
+        }
     }
 
     public List<CardEffect> GetCardEffects(int cardID) {
@@ -30,7 +38,11 @@ public class DeckController : MonoBehaviour {
             Transform child = CardHandUI.gameObject.transform.GetChild(i);
             CardDisplay cardDisplay = child.GetComponent<CardDisplay>();
             cardDisplay.card = CardList[cardIndex].GetComponent<CardDataScript>().GetCard();
+
+            cardDisplay.RefreshCardInfo();
         }
+
+        GameController.GameStateMachine.SetTrigger("HandPopulated");
     }
 
     // Update is called once per frame

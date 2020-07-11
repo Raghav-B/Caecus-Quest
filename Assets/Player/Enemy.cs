@@ -11,4 +11,8 @@ public class Enemy : Character {
             Player.getInstance().die();
         }
     }
+
+    public virtual void Move() {
+
+    }
 }
