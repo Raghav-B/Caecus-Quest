@@ -8,10 +8,11 @@ public class CardMouseBehaviour : MonoBehaviour,
     IPointerEnterHandler, 
     IPointerExitHandler
 {
+    public GameController gameController;
 
     private int siblingIndex;
     public void OnPointerEnter(PointerEventData eventData) {
-        Debug.Log("Pointer enter");
+        //Debug.Log("Pointer enter");
         RectTransform rT = GetComponent<RectTransform>();
         siblingIndex = transform.GetSiblingIndex();
         transform.SetAsLastSibling();
@@ -20,7 +21,7 @@ public class CardMouseBehaviour : MonoBehaviour,
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-        Debug.Log("Pointer exit");
+       // Debug.Log("Pointer exit");
         transform.SetSiblingIndex(siblingIndex);
         RectTransform rT = GetComponent<RectTransform>();
         rT.sizeDelta = new Vector2(rT.sizeDelta.x / 1.4f, rT.sizeDelta.y / 1.4f);
@@ -28,10 +29,12 @@ public class CardMouseBehaviour : MonoBehaviour,
     }
 
     public void OnPointerClick(PointerEventData eventData) {
-        Debug.Log("Pointer Click");
+        //Debug.Log("Pointer Click");
 
         CardDisplay cardDisp = gameObject.GetComponent<CardDisplay>();
         Card card = cardDisp.card;
         int cardID = card.cardID;
+
+        gameController.ApplyEffects(cardID);
     }
 }

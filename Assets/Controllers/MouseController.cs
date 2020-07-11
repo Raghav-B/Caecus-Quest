@@ -17,11 +17,11 @@ public class MouseController : MonoBehaviour
         if (Physics.Raycast(ray, out hit)) {
             worldPosition = hit.point;
 
-            //Debug.Log(worldPosition);
+            Debug.Log(worldPosition);
         }
 
         if (Input.GetMouseButtonDown(0)) {
-
+            moveTileAim();
         }
     }
 
@@ -32,12 +32,11 @@ public class MouseController : MonoBehaviour
     }
 
     private void moveTileAim() {
-        float deltaX = Mathf.Clamp((Input.GetAxis("Horizontal") * 100), -1, 1);
-        float deltaZ = Mathf.Clamp((Input.GetAxis("Vertical") * 100), -1, 1);
 
         Vector3 targetPos = new Vector3(Mathf.RoundToInt(worldPosition.x), 0f, Mathf.RoundToInt(worldPosition.z));
         Debug.Log("Target:" + targetPos);
-        tileIndicatorScript.targetLocation = targetPos;
+        tileIndicatorScript.changePos(targetPos);
+
     }
  
 }
