@@ -23,6 +23,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -5023044002090900237, guid: 31078ba1b791e5847a566694f6976d17,
         type: 3}
+    - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
+        type: 3}
+      propertyPath: cardInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: c126acfb2eed0b74fbdc1f05eede1331,
+        type: 2}
     - target: {fileID: 3990932402454220476, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_LocalPosition.x
