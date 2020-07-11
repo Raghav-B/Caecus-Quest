@@ -14,6 +14,7 @@ public class DeckController : MonoBehaviour {
 
     public List<CardEffect> GetCardEffects(int cardID) {
         foreach (GameObject card in CardList) {
+            if (card is null) Debug.Log("null id:" + cardID);
             CardDataScript currCard = card.GetComponent<CardDataScript>();
             if (currCard.GetCard().cardID == cardID) {
                 return currCard.cardEffects;

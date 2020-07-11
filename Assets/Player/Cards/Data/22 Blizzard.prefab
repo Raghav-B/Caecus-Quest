@@ -10,8 +10,14 @@ PrefabInstance:
     - target: {fileID: 1883910358467786778, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_Name
-      value: Blank Card
+      value: 22 Blizzard
       objectReference: {fileID: 0}
+    - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
+        type: 3}
+      propertyPath: cardInfo
+      value: 
+      objectReference: {fileID: 11400000, guid: 48220259941d6bf418b00e64b3415df2,
+        type: 2}
     - target: {fileID: 3990932402454220476, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -9,7 +9,7 @@ public class DamageEffect : CardEffect {
 
     public override void ExecuteEffect(Collider[] colliders) {
         for (int i = 0; i < colliders.Length; i++) {
-
+            //Debug.Log("collidr name:" + colliders[i].name);
             if (colliders[i].tag == "Enemy") {
                 if (chanceToHit == -1) {
                     chanceToHit = Random.value;

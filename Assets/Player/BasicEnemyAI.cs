@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class BasicEnemyAI : Enemy
@@ -13,6 +14,10 @@ public class BasicEnemyAI : Enemy
     {
         setHealth(startHealth);
         setArmor(startArmor);
+    }
+
+    public override void die() {
+        gameObject.SetActive(false);
     }
 
     // Update is called once per frame
