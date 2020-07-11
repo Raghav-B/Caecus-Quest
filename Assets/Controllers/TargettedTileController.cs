@@ -5,11 +5,9 @@ using UnityEngine;
 
 public class TargettedTileController : MonoBehaviour
 {
-    public Vector3 targetDelta = Vector3.zero;
-    public Vector3 targetLocation = Vector3.zero;
     public int size = 0;
     public GameObject tileIndicator;
-    public float delay = 1f;
+    public float delay = 0.5f;
 
     private float lastCall;
 
@@ -22,14 +20,13 @@ public class TargettedTileController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.time > lastCall + delay && (targetLocation != Vector3.zero || targetDelta != Vector3.zero)) {
+
+    }
+
+    public void changePos(Vector3 targetLocation) {
+        if (Time.time > lastCall + delay) {
             targetLocation = new Vector3((int)targetLocation.x, 0, (int)targetLocation.z);
             transform.position = targetLocation;
-
-            //targetDelta.x = (int)targetDelta.x;
-            //targetDelta.z = (int)targetDelta.z;
-            //transform.position = targetDelta;
-            //targetDelta = Vector3.zero;
             lastCall = Time.time;
         }
     }

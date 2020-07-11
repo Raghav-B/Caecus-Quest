@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.AssetImporters;
 using UnityEngine;
 
 public class GameController : MonoBehaviour
@@ -23,7 +24,8 @@ public class GameController : MonoBehaviour
     public void ApplyEffects(int cardID) {
         List<CardEffect> effectsList = deckController.GetCardEffects(cardID);
         foreach(CardEffect effect in effectsList) {
-            effect.ExecuteEffect();
+            Collider[] colliders = Physics.OverlapSphere(Target.transform.position, effect.radius);
+            effect.ExecuteEffect(colliders);
         }
     }
 }
