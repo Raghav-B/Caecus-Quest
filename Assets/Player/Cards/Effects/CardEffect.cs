@@ -4,6 +4,6 @@ using UnityEngine;
 
 public abstract class CardEffect : MonoBehaviour
 {
-    public virtual void ExecuteEffect() {
+    public virtual void ExecuteEffect(Collider[] colliders) {
     }
 }

@@ -14,7 +14,6 @@ public class Card : ScriptableObject
     public string cardName;
     public Rarity rarity;
     public string description;
-    public float chanceToHit;
     public Sprite splashArt;
 
     public Character character;

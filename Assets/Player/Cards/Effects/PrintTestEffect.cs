@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PrintTestEffect : CardEffect
 {
-    public override void ExecuteEffect() {
+    public override void ExecuteEffect(Collider[] colliders) {
         Debug.Log("Test effect executed!");
     }
 }

@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
-  m_Name: Fireball
+  m_Name: WilloWisp
   m_EditorClassIdentifier: 
-  cardID: 0
-  cardName: 
+  cardID: 4
+  cardName: Will o' Wisp
   rarity: 0
-  description: 
-  chanceToHit: 0
+  description: Deal 5 burn dmg
   splashArt: {fileID: 0}
