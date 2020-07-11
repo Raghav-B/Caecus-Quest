@@ -65,7 +65,10 @@
     <Compile Include="Assets\CardDisplay.cs" />
     <Compile Include="Assets\Player\Cards\Card.cs" />
     <Compile Include="Assets\Player\Cards\DeckController.cs" />
+    <Compile Include="Assets\Player\Character.cs" />
     <Compile Include="Assets\Player\DevController.cs" />
+    <Compile Include="Assets\Player\Enemy.cs" />
+    <Compile Include="Assets\Player\Player.cs" />
     <Compile Include="Assets\Player\PlayerController.cs" />
     <Compile Include="Assets\Player\PlayerHealthBox.cs" />
     <Compile Include="Assets\Player\TargettedTileController.cs" />
