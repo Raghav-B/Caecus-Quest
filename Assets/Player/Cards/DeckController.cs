@@ -7,7 +7,7 @@ public class DeckController : MonoBehaviour {
     public GameObject CardHandUI;
     public List<GameObject> CardList;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         for (int i = 0; i < CardHandUI.gameObject.transform.childCount; i++) {
             int cardIndex = Random.Range(0, CardList.Count);
