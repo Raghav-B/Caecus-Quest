@@ -382,10 +382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5acce28e0401b9d48aed69cf71bff3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveResolved: 1
   startHealth: 20
   startArmor: 0
   damage: 1
-  moveSpeed: 1
+  moveSpeed: 4
 --- !u!4 &283287089
 Transform:
   m_ObjectHideFlags: 0
@@ -1488,21 +1489,61 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1386590577}
+    - target: {fileID: 3654631158799515008, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: width
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654631158799515008, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: height
+      value: 210
+      objectReference: {fileID: 0}
     - target: {fileID: 3654631158942939328, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 1386590577}
+    - target: {fileID: 3654631158942939328, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: width
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654631158942939328, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: height
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654631158991221929, guid: ea5cf8a03fd959c488c857861f41a105,
         type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1386590577}
     - target: {fileID: 3654631158991221929, guid: ea5cf8a03fd959c488c857861f41a105,
         type: 3}
-      propertyPath: gameController
-      value: 
-      objectReference: {fileID: 1386590577}
+      propertyPath: width
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654631158991221929, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: height
+      value: 210
+      objectReference: {fileID: 0}
     - target: {fileID: 3654631159434490306, guid: ea5cf8a03fd959c488c857861f41a105,
         type: 3}
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1386590577}
+    - target: {fileID: 3654631159434490306, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: width
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654631159434490306, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: height
+      value: 210
+      objectReference: {fileID: 0}
     - target: {fileID: 3654631159917061226, guid: ea5cf8a03fd959c488c857861f41a105,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1633,6 +1674,16 @@ PrefabInstance:
       propertyPath: gameController
       value: 
       objectReference: {fileID: 1386590577}
+    - target: {fileID: 3654631160342157564, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: width
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3654631160342157564, guid: ea5cf8a03fd959c488c857861f41a105,
+        type: 3}
+      propertyPath: height
+      value: 210
+      objectReference: {fileID: 0}
     - target: {fileID: 8351547876501346582, guid: ea5cf8a03fd959c488c857861f41a105,
         type: 3}
       propertyPath: m_Enabled

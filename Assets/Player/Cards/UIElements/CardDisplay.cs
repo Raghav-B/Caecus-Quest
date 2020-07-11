@@ -21,11 +21,28 @@ public class CardDisplay : MonoBehaviour
         if (card.splashArt != null) splashArt.sprite = card.splashArt;
         
     }
+
+    public Card getCard() {
+        return card;
+    }
     
+    public bool getIsTransparent() {
+        return isTransparent;
+    }
+
     public void toggleTransparency() {
         GetComponent<CanvasGroup>().alpha = isTransparent ? 1 : 0;
         isTransparent = !isTransparent;
+    }
 
+    public void setTransparent() {
+        GetComponent<CanvasGroup>().alpha = 0;
+        isTransparent = true;
+    }
+
+    public void setOpaque() {
+        GetComponent<CanvasGroup>().alpha = 1;
+        isTransparent = false;
     }
 
 }

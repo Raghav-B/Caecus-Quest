@@ -8,24 +8,30 @@ public class CardMouseBehaviour : MonoBehaviour,
     IPointerEnterHandler, 
     IPointerExitHandler
 {
+    public float width = 150f;
+    public float height = 210f;
+
     private GameController gameController = GameController.Instance;
 
     private int siblingIndex;
     public void OnPointerEnter(PointerEventData eventData) {
         //Debug.Log("Pointer enter");
-        RectTransform rT = GetComponent<RectTransform>();
-        siblingIndex = transform.GetSiblingIndex();
-        transform.SetAsLastSibling();
-        rT.sizeDelta = new Vector2(rT.sizeDelta.x * 1.4f, rT.sizeDelta.y * 1.4f);
-        //rT.anchoredPosition = new Vector2(rT.anchoredPosition.x, transform.localPosition.y * 1.4f);
+        if (GameController.GameStateMachine.GetCurrentAnimatorStateInfo(0).IsName("Card Pick")) {
+            RectTransform rT = GetComponent<RectTransform>();
+            siblingIndex = transform.GetSiblingIndex();
+            transform.SetAsLastSibling();
+            rT.sizeDelta = new Vector2(rT.sizeDelta.x * 1.4f, rT.sizeDelta.y * 1.4f);
+
+        }
+
     }
 
     public void OnPointerExit(PointerEventData eventData) {
-       // Debug.Log("Pointer exit");
-        transform.SetSiblingIndex(siblingIndex);
-        RectTransform rT = GetComponent<RectTransform>();
-        rT.sizeDelta = new Vector2(rT.sizeDelta.x / 1.4f, rT.sizeDelta.y / 1.4f);
-        //rT.anchoredPosition = new Vector2(rT.anchoredPosition.x, transform.localPosition.y / 1.4f);
+        // Debug.Log("Pointer exit");
+        if (GameController.GameStateMachine.GetCurrentAnimatorStateInfo(0).IsName("Card Pick")) {
+            resetSize();
+        }
+
     }
 
     public void OnPointerClick(PointerEventData eventData) {
@@ -35,7 +41,14 @@ public class CardMouseBehaviour : MonoBehaviour,
             Card card = cardDisp.card;
             GameController.Instance.SetCardIDExecute(card.cardID);
             GameController.GameStateMachine.SetTrigger("CardPicked");
+            //resetSize();
             GetComponent<CardDisplay>().toggleTransparency();
         }
+    }
+
+    public void resetSize() {
+        transform.SetSiblingIndex(siblingIndex);
+        RectTransform rT = GetComponent<RectTransform>();
+        rT.sizeDelta = new Vector2(width, height);
     }
 }

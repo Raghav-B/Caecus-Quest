@@ -25,7 +25,10 @@ public class RootEffect : CardEffect {
             }
 
             int targetChoice = Random.Range(0, characterList.Count);
-            colliders[targetChoice].GetComponent<Character>().setRootTurns(rootTurns);
+            if (colliders[targetChoice] != null) {
+                colliders[targetChoice].GetComponent<Character>().setRootTurns(rootTurns);
+            }
+            
         }
 
         

@@ -54,4 +54,8 @@ public class GameController : MonoBehaviour
 
         GameStateMachine.SetTrigger("CardEffectEnded");
     }
+
+    public void RetargetMarker() {
+        Target.GetComponent<TargettedTileController>().changeRandomPos();
+    }
 }
