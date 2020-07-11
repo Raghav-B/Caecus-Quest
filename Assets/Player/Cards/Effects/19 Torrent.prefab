@@ -22,6 +22,12 @@ PrefabInstance:
       propertyPath: damage
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 3942128280562438849, guid: 601079f4864784743906cc036ff3c6be,
+        type: 3}
+      propertyPath: SpellEffectContainer
+      value: 
+      objectReference: {fileID: 7143187551907661976, guid: c57f1ebed3ef6404680a3ae20603d796,
+        type: 3}
     - target: {fileID: 8562040049119342796, guid: 601079f4864784743906cc036ff3c6be,
         type: 3}
       propertyPath: m_LocalPosition.x
