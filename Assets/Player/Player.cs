@@ -6,14 +6,8 @@ public class Player : Character {
 
     private static Player player;
 
-    [SerializeField]
-    private float maxHealth = 3;
-    [SerializeField]
-    private float startHealth;
-    [SerializeField]
-    private float maxArmor;
-    [SerializeField]
-    private float startArmor;
+    public float startHealth = 10;
+    public float startArmor = 5;
 
     private Player() {
         setHealth(startHealth);

@@ -17,10 +17,10 @@ public class MouseController : MonoBehaviour
         if (Physics.Raycast(ray, out hit)) {
             worldPosition = hit.point;
 
-            Debug.Log(worldPosition);
+            //Debug.Log(worldPosition);
         }
 
-        if (Input.GetMouseButtonDown(0)) {
+        if (Input.GetMouseButtonDown(1)) {
             moveTileAim();
         }
     }

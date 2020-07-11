@@ -27,6 +27,7 @@ public class Character : MonoBehaviour {
     }
 
     public bool takeDamage(float damage) {
+        Debug.Log("Damage taken:" + damage);
         health = health - damage;
         if (health <= 0) {
             return false;
