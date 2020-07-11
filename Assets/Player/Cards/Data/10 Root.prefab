@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &8276224942025601817
+--- !u!1001 &455332592165718866
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,13 +10,24 @@ PrefabInstance:
     - target: {fileID: 1883910358467786778, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_Name
-      value: Will o' Wisp
+      value: 10 Root
       objectReference: {fileID: 0}
+    - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
+        type: 3}
+      propertyPath: cardEffects.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
+        type: 3}
+      propertyPath: cardEffects.Array.data[0]
+      value: 
+      objectReference: {fileID: 5062201573362658162, guid: 3cded261cde92fd4c9b15c73450dafdb,
+        type: 3}
     - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: cardInfo
       value: 
-      objectReference: {fileID: 11400000, guid: 678131d25bc18324b893436491db1df6,
+      objectReference: {fileID: 11400000, guid: 7a8e0920fd5694746b55b18318a8496d,
         type: 2}
     - target: {fileID: 3990932402454220476, guid: a8771885464984b499a3e4110ee66747,
         type: 3}

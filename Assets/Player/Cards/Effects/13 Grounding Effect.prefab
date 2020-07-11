@@ -1,21 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-676638379428497955
+--- !u!114 &-5023044002090900237
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927883050348471169}
+  m_GameObject: {fileID: 3943705553292946283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba09364f0f2296409601a55fbb0a47a, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a7848e5ce01b06449e5a74e4f8b9560, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  chanceToHit: 20
-  radius: 0.5
---- !u!1001 &2357233825925085255
+  radius: 10
+  rootTurns: 1
+  rootChance: -1
+--- !u!1001 &922533725949538477
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -25,7 +25,7 @@ PrefabInstance:
     - target: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_Name
-      value: FireballEffect
+      value: 13 Grounding
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
@@ -85,9 +85,9 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6332402779375489303, guid: 294e5e475afb6e14b9fe5699b806bc12, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 294e5e475afb6e14b9fe5699b806bc12, type: 3}
---- !u!1 &1927883050348471169 stripped
+--- !u!1 &3943705553292946283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
     type: 3}
-  m_PrefabInstance: {fileID: 2357233825925085255}
+  m_PrefabInstance: {fileID: 922533725949538477}
   m_PrefabAsset: {fileID: 0}

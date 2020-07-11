@@ -11,8 +11,12 @@ public class DamageEffect : CardEffect {
         for (int i = 0; i < colliders.Length; i++) {
 
             if (colliders[i].tag == "Enemy") {
+                if (chanceToHit == -1) {
+                    chanceToHit = Random.value;
+                } 
+
                 if (Random.value <= chanceToHit) {
-                    colliders[i].GetComponent<Enemy>().takeDamage(damage);
+                    colliders[i].GetComponent<Character>().takeDamage(damage);
                 } else {
                     // Do nothing
                 }
