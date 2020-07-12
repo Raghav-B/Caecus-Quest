@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62067f6ab0a02243aa345fb1722de96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
+  radius: 1.5
   SpellEffectContainer: {fileID: 7143187551907661976, guid: c57f1ebed3ef6404680a3ae20603d796,
     type: 3}
   tilesToMove: 1

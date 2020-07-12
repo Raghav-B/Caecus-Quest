@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1.5
-  SpellEffectContainer: {fileID: 0}
+  SpellEffectContainer: {fileID: 6724216063650630406, guid: c0ea09eca1e8202499ef3668b4dc9895,
+    type: 3}
   rootPlayer: 0
   rootEnemy: 1
   randomTarget: 0

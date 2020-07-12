@@ -9,10 +9,12 @@ public class DamageRandomEffect : CardEffect
     public float damage = 10;
     public int targets = 1;
 
-    private List<Vector3> targetTransforms = new List<Vector3>();
+    private List<Vector3> targetTransforms;
+
 
     public override void ExecuteEffect(Collider[] colliders) {
         List<Enemy> enemies = EnemyController.Instance.GetEnemies();
+        targetTransforms = new List<Vector3>();
         int left = targets;
         while (left-- > 0) {
             int randInt = Random.Range(0, enemies.Count);
@@ -26,6 +28,7 @@ public class DamageRandomEffect : CardEffect
 
     public override void CreateSpellEffect() {
         for (int i = 0; i < targets; i++) {
+            //Debug.Log(targetTransforms[i]);
             CreateSpellEffect(targetTransforms[i]);
         }
     }

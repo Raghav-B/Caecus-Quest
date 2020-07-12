@@ -15,7 +15,7 @@ public abstract class CardEffect : MonoBehaviour
     }
 
     public virtual void CreateSpellEffect(Vector3 target) {
-        Debug.Log(target);
+        //Debug.Log(target);
         if (SpellEffectContainer != null) Object.Instantiate(SpellEffectContainer, target, Quaternion.identity);
     }
 

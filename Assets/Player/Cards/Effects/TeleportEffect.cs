@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TeleportEffect : CardEffect
 {
+
+    private Vector3 teleportPos;
     public override void ExecuteEffect(Collider[] colliders) {
         int[] mapLimits = TargettedTileController.Instance.GetGameLimits();
         Vector3 pos;
@@ -13,7 +15,7 @@ public class TeleportEffect : CardEffect
             randY = Random.Range(mapLimits[2], mapLimits[3] + 1);
             pos = new Vector3(randX, Player.Instance.transform.position.y, randY);
         } while (!CheckValidLanding(pos));
-
+        teleportPos = pos;
         Player.Instance.transform.position = pos;
     }
 
@@ -24,5 +26,9 @@ public class TeleportEffect : CardEffect
         }
 
         return true;
+    }
+
+    public override void CreateSpellEffect() {
+        CreateSpellEffect(teleportPos);
     }
 }

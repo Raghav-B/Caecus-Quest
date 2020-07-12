@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0
-  SpellEffectContainer: {fileID: 0}
+  SpellEffectContainer: {fileID: 5873957665822731079, guid: b055c83a4ee1355419a94d5afbb7cde5,
+    type: 3}
 --- !u!1001 &4316350272966852273
 PrefabInstance:
   m_ObjectHideFlags: 0
