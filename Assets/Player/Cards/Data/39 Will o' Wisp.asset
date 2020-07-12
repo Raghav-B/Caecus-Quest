@@ -15,6 +15,6 @@ MonoBehaviour:
   cardID: 4
   cardName: Will o' Wisp
   rarity: 0
-  description: Deal 5 burn dmg
-  splashArt: {fileID: 0}
+  description: Targets 2 random enemies for light damage... probably
+  splashArt: {fileID: 21300000, guid: 897426e70059afd4e99f3c780bacb713, type: 3}
   character: {fileID: 0}

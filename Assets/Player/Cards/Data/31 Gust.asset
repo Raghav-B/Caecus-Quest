@@ -16,5 +16,5 @@ MonoBehaviour:
   cardName: Gust
   rarity: 1
   description: Moves everything away from the target by 2 tiles
-  splashArt: {fileID: 0}
+  splashArt: {fileID: 21300000, guid: 77f4f8e691d5bc24fa59706d1a207492, type: 3}
   character: {fileID: 0}

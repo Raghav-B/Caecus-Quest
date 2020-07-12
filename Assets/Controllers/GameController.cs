@@ -31,6 +31,8 @@ public class GameController : MonoBehaviour
     private Color origMissedScreenColor;
     private Vector3 origMissedScreenPos;
 
+    public GameObject[] EnemiesList;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -65,6 +67,19 @@ public class GameController : MonoBehaviour
 
     public void SetCardIDExecute(int id) {
         cardIDExecute = id;
+    }
+
+    public  void GenerateLevel() {
+        int[] constraints = TargettedTileController.Instance.GetGameLimits();
+        int maxEnemies = Random.Range(5, 20);
+        for (int i = 0; i < maxEnemies; i++) {
+            int xPos = Random.Range(constraints[0], constraints[1] + 1);
+            int yPos = Random.Range(constraints[2], constraints[3] + 1);
+
+            Object.Instantiate(EnemiesList[0], new Vector3(xPos, 0.5f, yPos), Quaternion.identity);
+        }
+
+        gameStateMachine.SetTrigger("CardPicked");
     }
 
     public void ApplyEffects() {

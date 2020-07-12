@@ -7,7 +7,7 @@ public class SceneFunctions : MonoBehaviour
 {
 
     public void LoadProto() {
-        SceneManager.LoadScene("ProtoLevel");
+        SceneManager.LoadScene(2);
     }
     // Start is called before the first frame update
     void Start()

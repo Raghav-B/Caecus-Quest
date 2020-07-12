@@ -16,5 +16,5 @@ MonoBehaviour:
   cardName: Teleport
   rarity: 0
   description: Teleports you to a random tile
-  splashArt: {fileID: 0}
+  splashArt: {fileID: 21300000, guid: 364d876efee34aa408ee22c374c0b9db, type: 3}
   character: {fileID: 0}

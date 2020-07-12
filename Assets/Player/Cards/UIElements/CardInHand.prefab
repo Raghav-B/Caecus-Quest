@@ -222,7 +222,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: 5bb199b276925f04b847679d0c514d92, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 2173654137557061367}
   - component: {fileID: 1810222943}
   m_Layer: 5
-  m_Name: CardBlank
+  m_Name: CardInHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

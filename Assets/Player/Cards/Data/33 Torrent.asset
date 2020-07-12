@@ -15,6 +15,6 @@ MonoBehaviour:
   cardID: 33
   cardName: Torrent
   rarity: 1
-  description: Deal 20 dmg + Wet
+  description: Heals a wide area for 30 HP
   splashArt: {fileID: 0}
   character: {fileID: 0}

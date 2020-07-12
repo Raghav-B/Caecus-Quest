@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4447402249840428306}
   - component: {fileID: 4447402249840428309}
   - component: {fileID: 4447402249840428307}
+  - component: {fileID: 7460983770209360971}
+  - component: {fileID: 7460983770209360970}
+  - component: {fileID: 7460983770209360973}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -46,10 +49,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CardHandUI: {fileID: 0}
   CardList:
-  - {fileID: 1287641874870739333, guid: 27dfdf2422b0c244ca62227ab4048894, type: 3}
-  - {fileID: 233966307143510044, guid: 7ecf772448b5a6b428ddefb547a219dc, type: 3}
-  - {fileID: 4671943553072138739, guid: 3657669e26e54ff4d8ca4d0fdb9fd3cc, type: 3}
-  - {fileID: 7566030611254561539, guid: 90080060a38837647ae8ce4b3f4e94c6, type: 3}
+  - {fileID: 4626472843140508612, guid: 8ccbb01a021cd404898d0e9d932d60cc, type: 3}
+  - {fileID: 815175882853348404, guid: 87b99125cd751d5419b6ed6595e6027a, type: 3}
+  - {fileID: 3722840167449686746, guid: b0c6106e87738f54cbb0fdb44df60bc5, type: 3}
+  - {fileID: 3722840167449686746, guid: b0c6106e87738f54cbb0fdb44df60bc5, type: 3}
 --- !u!114 &4447402249840428307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,3 +66,134 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Target: {fileID: 0}
+  spellWaitTimer: 2
+  winScreen: {fileID: 0}
+  lossScreen: {fileID: 0}
+  missedScreen: {fileID: 0}
+--- !u!82 &7460983770209360971
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447402249840428308}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c275bf70b125416499eee5f7b98b5eb2, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!95 &7460983770209360970
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447402249840428308}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c9f9c818a287e2b439fa2d49fe5a0929, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7460983770209360973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4447402249840428308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb41ae80aa3c2fb4ea76d17ffcd20842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

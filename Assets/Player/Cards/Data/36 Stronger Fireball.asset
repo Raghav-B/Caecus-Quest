@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 36 Stronger Fireball
   m_EditorClassIdentifier: 
   cardID: 36
-  cardName: Stronger Fireball
+  cardName: Focused Fireball
   rarity: 1
-  description: Deal 40 dmg
-  splashArt: {fileID: 0}
+  description: Deal 40 dmg in a small area
+  splashArt: {fileID: 21300000, guid: 667b76364aeb12b4684be29e7b495ef3, type: 3}
   character: {fileID: 0}

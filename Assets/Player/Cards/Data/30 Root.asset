@@ -16,5 +16,5 @@ MonoBehaviour:
   cardName: Root
   rarity: 0
   description: Roots all nearby targets for 1 turn
-  splashArt: {fileID: 0}
+  splashArt: {fileID: 21300000, guid: f23b611ed02cb08449ceebdfafddf059, type: 3}
   character: {fileID: 0}

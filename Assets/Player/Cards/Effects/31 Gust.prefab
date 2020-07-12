@@ -15,9 +15,9 @@ MonoBehaviour:
   radius: 2.5
   SpellEffectContainer: {fileID: 7143187551907661976, guid: c57f1ebed3ef6404680a3ae20603d796,
     type: 3}
-  tilesToMove: 2
-  PlayerOnly: 1
-  PushAway: 0
+  tilesToMove: 4
+  PlayerOnly: 0
+  PushAway: 1
 --- !u!1001 &5709322474266169601
 PrefabInstance:
   m_ObjectHideFlags: 0

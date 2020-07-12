@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62c42bc73b403af41abd0ab886298ec8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 10
+  radius: 2.5
   SpellEffectContainer: {fileID: 0}
   healPlayer: 1
   healEnemy: 1
-  healAmt: 10
+  healAmt: 20
 --- !u!1001 &4686695812937518032
 PrefabInstance:
   m_ObjectHideFlags: 0

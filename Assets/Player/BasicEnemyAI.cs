@@ -16,15 +16,33 @@ public class BasicEnemyAI : Enemy {
         targetPos = transform.position;
     }
 
-
-
     public override void Move() {
         if (rootTurns > 0) {
             rootTurns--;
             return;
         }
+        int dir = Random.Range(0, 4);
+        
+        Vector3 newDir = Vector3.forward;
 
-        targetPos = transform.position - Vector3.forward;
+        switch (dir) {
+        case 1:
+            newDir = Vector3.forward;
+            break;
+        case 2:
+            newDir = Vector3.right;
+            break;
+        case 3:
+            newDir = -Vector3.forward;
+            break;
+        case 4:
+            newDir = -Vector3.right;
+            break;
+        }
+        int[] constraints = TargettedTileController.Instance.GetGameLimits();
+        targetPos = transform.position - newDir;
+        targetPos.x = Mathf.Clamp(targetPos.x, constraints[0], constraints[1]);
+        targetPos.z = Mathf.Clamp(targetPos.z, constraints[2], constraints[3]);
         moveResolved = false;
     }
 

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 34 Fireball
   m_EditorClassIdentifier: 
   cardID: 34
-  cardName: Fireball
+  cardName: Explosion
   rarity: 0
-  description: Deal 20 dmg
-  splashArt: {fileID: 21300000, guid: fc04ecb2ec5e9804abcbddb9ffd6d05d, type: 3}
+  description: Deal 20 dmg in a wide area
+  splashArt: {fileID: 21300000, guid: 3dcce02e7e18acc47a474edc99143fc2, type: 3}
   character: {fileID: 0}

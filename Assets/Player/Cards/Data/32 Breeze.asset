@@ -15,6 +15,6 @@ MonoBehaviour:
   cardID: 32
   cardName: Movement
   rarity: 0
-  description: Move 1 tile in a random direction
-  splashArt: {fileID: 0}
+  description: Move objects 1 tile in a random direction
+  splashArt: {fileID: 21300000, guid: 5f50e21043acf1b4bbccf27aed569128, type: 3}
   character: {fileID: 0}

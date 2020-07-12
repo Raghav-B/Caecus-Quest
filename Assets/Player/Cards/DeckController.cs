@@ -6,6 +6,7 @@ public class DeckController : MonoBehaviour {
     
     public GameObject CardHandUI;
     public List<GameObject> CardList;
+    public bool RandomStage = false;
 
     private static DeckController instance;
     public static DeckController Instance { get { return instance; } }
@@ -43,7 +44,14 @@ public class DeckController : MonoBehaviour {
             cardDisplay.RefreshCardInfo();
         }
 
-        GameController.GameStateMachine.SetTrigger("HandPopulated");
+        if (RandomStage) {
+            GameController.GameStateMachine.SetTrigger("RandomStage");
+        }
+
+        else {
+            GameController.GameStateMachine.SetTrigger("HandPopulated");
+        }
+        
     }
 
     private Card DrawCard() {
@@ -62,6 +70,23 @@ public class DeckController : MonoBehaviour {
                 child.GetComponent<CardMouseBehaviour>().resetSize();
                 
                 cardDisp.setOpaque();
+
+                if (i > 0) {
+                    child = CardHandUI.gameObject.transform.GetChild(i - 1);
+                    cardDisp = child.GetComponent<CardDisplay>();
+                    cardDisp.card = DrawCard();
+                    cardDisp.RefreshCardInfo();
+                    child.GetComponent<CardMouseBehaviour>().resetSize();
+                }
+
+                if (i < cardCount - 1) {
+                    child = CardHandUI.gameObject.transform.GetChild(i + 1);
+                    cardDisp = child.GetComponent<CardDisplay>();
+                    cardDisp.card = DrawCard();
+                    cardDisp.RefreshCardInfo();
+                    child.GetComponent<CardMouseBehaviour>().resetSize();
+                }
+                
             }
         }
 
