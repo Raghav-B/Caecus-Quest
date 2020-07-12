@@ -10,17 +10,17 @@ public class MouseController : MonoBehaviour
     public GameObject TileIndicator;
 
     private TargettedTileController tileIndicatorScript;
-    void Update() {
+    void Update() { 
+        if (Input.GetMouseButtonDown(1)) {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            int layerMask = 1 << 9;
 
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out hit)) {
-            worldPosition = hit.point;
+            if (Physics.Raycast(ray, out hit, layerMask)) {
+                worldPosition = hit.point;
+            }
 
             //Debug.Log(worldPosition);
-        }
-
-        if (Input.GetMouseButtonDown(1)) {
             moveTileAim();
         }
     }
@@ -34,9 +34,9 @@ public class MouseController : MonoBehaviour
     private void moveTileAim() {
 
         Vector3 targetPos = new Vector3(Mathf.RoundToInt(worldPosition.x), 0f, Mathf.RoundToInt(worldPosition.z));
-        //Debug.Log("Target:" + targetPos);
-        tileIndicatorScript.changeRandomPos();
-        //tileIndicatorScript.changePos(targetPos);
+        Debug.Log("Target:" + targetPos);
+        //tileIndicatorScript.changeRandomPos();
+        tileIndicatorScript.changePos(targetPos);
 
     }
  
