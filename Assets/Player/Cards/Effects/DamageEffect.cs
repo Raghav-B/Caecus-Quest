@@ -8,6 +8,8 @@ public class DamageEffect : CardEffect {
     public float chanceToHit;
 
     public override void ExecuteEffect(Collider[] colliders) {
+        Player.Instance.playerAnimator.SetTrigger("Casting");
+        Player.Instance.playerAnimator.ResetTrigger("Idling");
         for (int i = 0; i < colliders.Length; i++) {
             //Debug.Log("collidr name:" + colliders[i].name);
             if (colliders[i].tag == "Enemy") {
@@ -15,6 +17,7 @@ public class DamageEffect : CardEffect {
                     chanceToHit = Random.value;
                 }
 
+                
                 if (Random.value <= chanceToHit) {
                     Player.Instance.damageEnemy((Enemy)colliders[i].GetComponent<Character>(), damage);
                 } else {
@@ -23,5 +26,6 @@ public class DamageEffect : CardEffect {
                 }
             }
         }
+        Player.Instance.playerAnimator.SetTrigger("Idling");
     }
 }
