@@ -7,7 +7,7 @@ public class Player : Character {
     private static Player instance;
 
     public float moveSpeed;
-    private Animator playerAnimator;
+    public Animator playerAnimator;
 
     public static Player Instance { get { return instance; } }
     void Awake() {
@@ -26,13 +26,10 @@ public class Player : Character {
     }
 
     public void damageEnemy(Enemy target, float spellDamage) {
-        playerAnimator.SetTrigger("Casting");
-        playerAnimator.ResetTrigger("Idling");
         bool isEnemyAlive = target.takeDamage(spellDamage);
         if (!isEnemyAlive) {
             target.die();
         }
-        playerAnimator.SetTrigger("Idling");
     }
 
     public override void die() {

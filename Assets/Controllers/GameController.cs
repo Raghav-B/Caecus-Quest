@@ -32,6 +32,9 @@ public class GameController : MonoBehaviour
         gameStateMachine = GetComponent<Animator>();
 
         deckController = GetComponent<DeckController>();
+
+        GetComponent<AudioSource>().Play();
+        GetComponent<AudioSource>().loop = true;
     }
 
     // Update is called once per frame
