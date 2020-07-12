@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
   m_Name: 32 Breeze
   m_EditorClassIdentifier: 
-  cardID: 23
+  cardID: 32
   cardName: Movement
   rarity: 0
   description: Move 1 tile in a random direction

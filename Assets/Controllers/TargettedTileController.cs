@@ -40,6 +40,11 @@ public class TargettedTileController : MonoBehaviour
 
     }
 
+    public int[] GetGameLimits() {
+        int[] retList = { minX, maxX, minY, maxY };
+        return retList;
+    }
+
     public void rerollPos() {
 
     }
