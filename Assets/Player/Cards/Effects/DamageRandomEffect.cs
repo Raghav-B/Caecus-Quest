@@ -9,7 +9,7 @@ public class DamageRandomEffect : CardEffect
     public float damage = 10;
     public int targets = 1;
 
-    private List<Enemy> targetTransforms = new List<Enemy>();
+    private List<Vector3> targetTransforms = new List<Vector3>();
 
     public override void ExecuteEffect(Collider[] colliders) {
         List<Enemy> enemies = EnemyController.Instance.GetEnemies();
@@ -17,7 +17,9 @@ public class DamageRandomEffect : CardEffect
         while (left-- > 0) {
             int randInt = Random.Range(0, enemies.Count);
 
-            targetTransforms.Add(enemies[randInt]);
+            targetTransforms.Add(enemies[randInt].GetComponent<Transform>().position);
+
+            Debug.Log(enemies[randInt].GetComponent<Transform>().position);
             enemies[randInt].GetComponent<Enemy>().takeDamage(damage);
         }
       
@@ -25,7 +27,7 @@ public class DamageRandomEffect : CardEffect
 
     public override void CreateSpellEffect() {
         for (int i = 0; i < targets; i++) {
-            CreateSpellEffect(targetTransforms[i].GetComponent<Transform>());
+            CreateSpellEffect(targetTransforms[i]);
         }
     }
 }
