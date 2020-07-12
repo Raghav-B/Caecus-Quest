@@ -55,7 +55,7 @@ public class GameController : MonoBehaviour
             //Debug.Log("colliders:" + colliders.Length);
             effect.ExecuteEffect(colliders);
 
-            effect.CreateSpellEffect(Target.GetComponent<Transform>());
+            effect.CreateSpellEffect();
         }
 
         spellEffectTimer = Time.time;

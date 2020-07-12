@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1.5
-  SpellEffectContainer: {fileID: 0}
+  SpellEffectContainer: {fileID: 2346858167849755171, guid: 5eb5783acda71a54fbba8d97aaf7ed34,
+    type: 3}
   healPlayer: 1
   healEnemy: 1
   healAmt: 50
