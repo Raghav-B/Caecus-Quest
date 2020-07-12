@@ -1,17 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Character : MonoBehaviour {
-    public float maxHealth;
+    public float maxHealth = 100;
     public float health;
-    public float maxArmor;
+    public float maxArmor = 50;
     public float armor;
 
     private int rootTurns = 0;
 
     public Vector3 targetPos;
     public bool moveResolved = true;
+
+    void Awake() {
+        health = maxHealth;
+        armor = maxArmor;
+    }
 
     public float getHealth() {
         return health;
@@ -32,6 +38,7 @@ public class Character : MonoBehaviour {
     public bool takeDamage(float damage) {
         health = health - damage;
         if (health <= 0) {
+            die();
             return false;
         } else {
             return true;
@@ -140,7 +147,7 @@ public class Character : MonoBehaviour {
     }
 
     public virtual void die() {
-
+        moveResolved = true;
     }
 
 

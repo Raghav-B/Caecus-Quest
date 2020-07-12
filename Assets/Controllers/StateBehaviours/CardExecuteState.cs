@@ -9,16 +9,23 @@ public class CardExecuteState : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 
         GameController.Instance.ApplyEffects();
-        if(EnemyController.Instance.UpdateEnemyList()) {
-            GameController.GameStateMachine.SetTrigger("PlayerWon");
-        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (!EnemyController.Instance.UpdateEnemyList()) {
+            animator.SetTrigger("PlayerWon");
+        }
+
+        else if (Player.Instance.getHealth() <= Mathf.Epsilon) {
+            animator.SetTrigger("PlayerDied");
+        }
+
+        else if (GameController.Instance.PollSpellEffect()) {
+            animator.SetTrigger("CardEffectEnded");
+        }
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

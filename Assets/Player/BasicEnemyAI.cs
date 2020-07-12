@@ -5,28 +5,23 @@ using UnityEditor.UI;
 using UnityEngine;
 
 public class BasicEnemyAI : Enemy {
-    public float startHealth = 1;
-    public float startArmor = 0;
     public float damage = 1;
     public float moveSpeed;
 
     private bool move = false;
+    private bool playerHit = true;
 
     // Start is called before the first frame update
     void Awake() {
-        setHealth(startHealth);
-        setArmor(startArmor);
-
+        health = maxHealth;
+        armor = maxArmor;
         targetPos = transform.position;
-    }
-
-    public override void die() {
-        gameObject.SetActive(false);
     }
 
     public override void Move() {
         targetPos = transform.position - Vector3.forward;
         moveResolved = false;
+        playerHit = false;
     }
 
     // Update is called once per frame
@@ -38,6 +33,14 @@ public class BasicEnemyAI : Enemy {
                 moveResolved = true;
                 //Debug.Log("Enemy reports resolved");
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider collision) {
+        if (collision.tag == "Player") {
+            
+            collision.transform.GetComponent<Player>().takeDamage(damage);   
+            die();
         }
     }
 

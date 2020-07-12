@@ -10,7 +10,7 @@ public abstract class CardEffect : MonoBehaviour
     public virtual void ExecuteEffect(Collider[] colliders) {
     }
 
-    public virtual void CreateSpellEffect() {
-        Instantiate(SpellEffectContainer, transform);
+    public virtual void CreateSpellEffect(Transform target) {
+        Object.Instantiate(SpellEffectContainer, target.position, target.rotation);
     }
 }

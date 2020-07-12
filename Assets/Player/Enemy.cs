@@ -16,4 +16,9 @@ public class Enemy : Character {
     public virtual void Move() {
 
     }
+
+    public override void die() {
+        gameObject.SetActive(false);
+        base.die();
+    }
 }

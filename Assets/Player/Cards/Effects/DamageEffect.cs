@@ -13,11 +13,12 @@ public class DamageEffect : CardEffect {
             if (colliders[i].tag == "Enemy") {
                 if (chanceToHit == -1) {
                     chanceToHit = Random.value;
-                } 
+                }
 
                 if (Random.value <= chanceToHit) {
                     Player.Instance.damageEnemy((Enemy)colliders[i].GetComponent<Character>(), damage);
                 } else {
+                    Debug.Log("Missed");
                     // Do nothing
                 }
             }
