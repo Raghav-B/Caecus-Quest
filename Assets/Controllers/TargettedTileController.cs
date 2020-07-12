@@ -40,6 +40,10 @@ public class TargettedTileController : MonoBehaviour
 
     }
 
+    public void rerollPos() {
+
+    }
+
     public void changeRandomPos() {
         int newX = Random.Range(minX, maxX + 1);
         int newY = Random.Range(minY, maxY + 1);
@@ -53,6 +57,11 @@ public class TargettedTileController : MonoBehaviour
             transform.position = targetLocation;
             lastCall = Time.time;
         }
+    }
+
+    public void scaleTile(float spellRadius) {
+        float newScale = spellRadius * 2;
+        transform.localScale = new Vector3(newScale, transform.localScale.y, newScale);
     }
 
     void SizeController() {

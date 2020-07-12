@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_Name
-      value: BlankEffect
+      value: 19 Torrent
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}

@@ -22,6 +22,10 @@ public class CardMouseBehaviour : MonoBehaviour,
             transform.SetAsLastSibling();
             rT.sizeDelta = new Vector2(rT.sizeDelta.x * 1.4f, rT.sizeDelta.y * 1.4f);
 
+            CardDisplay cardDisp = gameObject.GetComponent<CardDisplay>();
+            Card card = cardDisp.card;
+            float tileRadius = DeckController.Instance.GetCardEffects(card.cardID)[0].radius;
+            TargettedTileController.Instance.scaleTile(tileRadius); 
         }
 
     }
@@ -31,7 +35,6 @@ public class CardMouseBehaviour : MonoBehaviour,
         if (GameController.GameStateMachine.GetCurrentAnimatorStateInfo(0).IsName("Card Pick")) {
             resetSize();
         }
-
     }
 
     public void OnPointerClick(PointerEventData eventData) {

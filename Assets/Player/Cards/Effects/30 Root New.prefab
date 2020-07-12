@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1a6f2951f4fbc4d8e9fe5ba0129fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 1.5
   SpellEffectContainer: {fileID: 0}
   rootPlayer: 0
   rootEnemy: 1

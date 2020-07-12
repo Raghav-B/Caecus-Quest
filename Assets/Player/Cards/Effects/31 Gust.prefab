@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d62067f6ab0a02243aa345fb1722de96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 2
+  radius: 1.5
   SpellEffectContainer: {fileID: 7143187551907661976, guid: c57f1ebed3ef6404680a3ae20603d796,
     type: 3}
   tilesToMove: 2
@@ -28,7 +28,7 @@ PrefabInstance:
     - target: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_Name
-      value: 24 Largemove
+      value: 31 Gust
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}

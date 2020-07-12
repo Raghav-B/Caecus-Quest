@@ -19,7 +19,7 @@ public class DeckController : MonoBehaviour {
         else {
             instance = this;
         }
-    }
+    }  
 
     public List<CardEffect> GetCardEffects(int cardID) {
         foreach (GameObject card in CardList) {
