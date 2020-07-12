@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1883910358467786778, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_Name
-      value: 05 StrongerFireball
+      value: 36 Stronger Fireball
       objectReference: {fileID: 0}
     - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
@@ -27,7 +27,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cardEffects.Array.data[0]
       value: 
-      objectReference: {fileID: -9050101327627970936, guid: 336cca91d88e5d74d97667d356ef96cf,
+      objectReference: {fileID: 7703185975937488982, guid: e07c3498bae83a1449141868ef53aa19,
         type: 3}
     - target: {fileID: 3990932402454220476, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
