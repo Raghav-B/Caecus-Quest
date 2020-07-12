@@ -16,7 +16,8 @@ public class MouseController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             int layerMask = 1 << 9;
 
-            if (Physics.Raycast(ray, out hit, layerMask)) {
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask)) {
+                Debug.Log(hit.collider.name + " was hit!");
                 worldPosition = hit.point;
             }
 
@@ -34,7 +35,7 @@ public class MouseController : MonoBehaviour
     private void moveTileAim() {
 
         Vector3 targetPos = new Vector3(Mathf.RoundToInt(worldPosition.x), 0f, Mathf.RoundToInt(worldPosition.z));
-        Debug.Log("Target:" + targetPos);
+        //Debug.Log("Target:" + targetPos);
         //tileIndicatorScript.changeRandomPos();
         tileIndicatorScript.changePos(targetPos);
 

@@ -16,7 +16,7 @@ public class DamageEffect : CardEffect {
                 } 
 
                 if (Random.value <= chanceToHit) {
-                    colliders[i].GetComponent<Character>().takeDamage(damage);
+                    Player.Instance.damageEnemy((Enemy)colliders[i].GetComponent<Character>(), damage);
                 } else {
                     // Do nothing
                 }

@@ -7,6 +7,7 @@ public class Player : Character {
     private static Player instance;
 
     public float moveSpeed;
+    private Animator playerAnimator;
 
     public static Player Instance { get { return instance; } }
     void Awake() {
@@ -19,27 +20,45 @@ public class Player : Character {
 
         health = maxHealth;
         armor = maxArmor;
+
+        playerAnimator = transform.GetChild(0).GetComponent<Animator>();
+        playerAnimator.SetTrigger("Idling");
     }
 
     public void damageEnemy(Enemy target, float spellDamage) {
+        playerAnimator.SetTrigger("Casting");
+        playerAnimator.ResetTrigger("Idling");
         bool isEnemyAlive = target.takeDamage(spellDamage);
         if (!isEnemyAlive) {
             target.die();
         }
+        playerAnimator.SetTrigger("Idling");
     }
 
     public override void die() {
-    
+        playerAnimator.SetTrigger("Dead");
+        playerAnimator.ResetTrigger("Idling");
     }
 
     // Update is called once per frame
     void Update() {
         if (!moveResolved) {
             transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * moveSpeed);
+
+            if (targetPos.x > transform.position.x || targetPos.z > transform.position.z) {
+                playerAnimator.SetTrigger("MovingRight");
+                playerAnimator.ResetTrigger("Idling");
+            } else {
+                playerAnimator.SetTrigger("MovingLeft");
+                playerAnimator.ResetTrigger("Idling");
+            }
+
             if (Vector3.Distance(transform.position, targetPos) < 0.01f) {
                 transform.position = targetPos;
                 moveResolved = true;
-                //Debug.Log("Enemy reports resolved");
+                playerAnimator.SetTrigger("Idling");
+                playerAnimator.ResetTrigger("MovingLeft");
+                playerAnimator.ResetTrigger("MovingRight");
             }
         }
     }
