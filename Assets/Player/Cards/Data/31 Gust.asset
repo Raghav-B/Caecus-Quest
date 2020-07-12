@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
   m_Name: 31 Gust
   m_EditorClassIdentifier: 
-  cardID: 24
+  cardID: 31
   cardName: Gust
   rarity: 1
   description: Moves everything away from the target by 2 tiles

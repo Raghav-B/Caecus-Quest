@@ -40,6 +40,11 @@ public class TargettedTileController : MonoBehaviour
 
     }
 
+    public int[] GetGameLimits() {
+        int[] retList = { minX, maxX, minY, maxY };
+        return retList;
+    }
+
     public void changeRandomPos() {
         int newX = Random.Range(minX, maxX + 1);
         int newY = Random.Range(minY, maxY + 1);

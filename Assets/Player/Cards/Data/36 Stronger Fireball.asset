@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
   m_Name: 36 Stronger Fireball
   m_EditorClassIdentifier: 
-  cardID: 5
+  cardID: 36
   cardName: Stronger Fireball
   rarity: 1
   description: Deal 40 dmg

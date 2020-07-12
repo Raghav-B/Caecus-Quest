@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
   m_Name: 30 Root
   m_EditorClassIdentifier: 
-  cardID: 0
-  cardName: 
+  cardID: 30
+  cardName: Root
   rarity: 0
-  description: 
+  description: Roots all nearby targets for 1 turn
   splashArt: {fileID: 0}
   character: {fileID: 0}
