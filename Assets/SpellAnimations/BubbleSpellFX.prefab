@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1383103bc5a217b43962dbd6c0ca4ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BubbleObject: {fileID: 8199117139956783760, guid: 856e6adf09710aa4f9bb3662db805cae,
+  SpawnObject: {fileID: 8199117139956783760, guid: 856e6adf09710aa4f9bb3662db805cae,
     type: 3}
 --- !u!82 &4533630128893102435
 AudioSource:

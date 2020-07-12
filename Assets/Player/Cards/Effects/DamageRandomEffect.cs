@@ -19,7 +19,6 @@ public class DamageRandomEffect : CardEffect
 
             targetTransforms.Add(enemies[randInt].GetComponent<Transform>().position);
 
-            Debug.Log(enemies[randInt].GetComponent<Transform>().position);
             enemies[randInt].GetComponent<Enemy>().takeDamage(damage);
         }
       
