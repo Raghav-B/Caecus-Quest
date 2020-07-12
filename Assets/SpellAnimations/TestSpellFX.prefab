@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce630e282d5fb554fabcecf5e627152d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpellCube: {fileID: 7400570457903361514, guid: 167208943087f4d40ba4faf7cd4d6a6c,
+  SpellCube: {fileID: 500505714336137246, guid: a0fa8631d3f86334891f6756b3fb9857,
     type: 3}

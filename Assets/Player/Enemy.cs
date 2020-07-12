@@ -12,4 +12,8 @@ public class Enemy : Character {
             Player.Instance.die();
         }
     }
+
+    public virtual void Move() {
+
+    }
 }

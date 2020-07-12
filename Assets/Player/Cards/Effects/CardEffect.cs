@@ -9,4 +9,8 @@ public abstract class CardEffect : MonoBehaviour
     public GameObject SpellEffectContainer;
     public virtual void ExecuteEffect(Collider[] colliders) {
     }
+
+    public virtual void CreateSpellEffect() {
+        Instantiate(SpellEffectContainer, transform);
+    }
 }

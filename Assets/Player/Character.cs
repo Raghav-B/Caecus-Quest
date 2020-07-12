@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour {
-    private float maxHealth;
-    private float health;
-    private float maxArmor;
-    private float armor;
+    public float maxHealth;
+    public float health;
+    public float maxArmor;
+    public float armor;
 
     private int rootTurns = 0;
 
@@ -143,7 +143,5 @@ public class Character : MonoBehaviour {
 
     }
 
-    public virtual void Move() {
 
-    }
 }

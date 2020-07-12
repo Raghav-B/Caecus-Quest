@@ -6,8 +6,6 @@ public class Player : Character {
 
     private static Player instance;
 
-    public float startHealth = 10;
-    public float startArmor = 5;
     public float moveSpeed;
 
     public static Player Instance { get { return instance; } }
@@ -18,6 +16,9 @@ public class Player : Character {
         else {
             instance = this;
         }
+
+        health = maxHealth;
+        armor = maxArmor;
     }
 
     public void damageEnemy(Enemy target, float spellDamage) {

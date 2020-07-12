@@ -45,10 +45,10 @@ public class GameController : MonoBehaviour
     public void ApplyEffects() {
         List<CardEffect> effectsList = deckController.GetCardEffects(cardIDExecute);
         foreach(CardEffect effect in effectsList) {
-            Debug.Log("Radius:" + effect.radius);
+            //Debug.Log("Radius:" + effect.radius);
 
             Collider[] colliders = Physics.OverlapSphere(Target.transform.position, effect.radius);
-            Debug.Log("colliders:" + colliders.Length);
+            //Debug.Log("colliders:" + colliders.Length);
             effect.ExecuteEffect(colliders);
         }
 
