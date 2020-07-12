@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
   m_Name: 24 Large Move
   m_EditorClassIdentifier: 
-  cardID: 0
-  cardName: 
-  rarity: 0
-  description: 
+  cardID: 24
+  cardName: Gust
+  rarity: 1
+  description: Moves everything around the target by 2 tiles
   splashArt: {fileID: 0}
   character: {fileID: 0}

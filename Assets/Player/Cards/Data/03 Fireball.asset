@@ -16,4 +16,5 @@ MonoBehaviour:
   cardName: Fireball
   rarity: 0
   description: Deal 20 dmg
-  splashArt: {fileID: 0}
+  splashArt: {fileID: 21300000, guid: fc04ecb2ec5e9804abcbddb9ffd6d05d, type: 3}
+  character: {fileID: 0}
