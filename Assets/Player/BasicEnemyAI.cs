@@ -10,7 +10,6 @@ public class BasicEnemyAI : Enemy {
     public float damage = 1;
     public float moveSpeed;
 
-    private Vector3 targetPos;
     private bool move = false;
 
     // Start is called before the first frame update
@@ -28,7 +27,6 @@ public class BasicEnemyAI : Enemy {
     public override void Move() {
         targetPos = transform.position - Vector3.forward;
         moveResolved = false;
-        
     }
 
     // Update is called once per frame

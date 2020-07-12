@@ -8,6 +8,7 @@ public class Player : Character {
 
     public float startHealth = 10;
     public float startArmor = 5;
+    public float moveSpeed;
 
     public static Player Instance { get { return instance; } }
     void Awake() {
@@ -28,5 +29,17 @@ public class Player : Character {
 
     public override void die() {
     
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (!moveResolved) {
+            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * moveSpeed);
+            if (Vector3.Distance(transform.position, targetPos) < 0.01f) {
+                transform.position = targetPos;
+                moveResolved = true;
+                //Debug.Log("Enemy reports resolved");
+            }
+        }
     }
 }

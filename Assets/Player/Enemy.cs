@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Enemy : Character {
 
-    public bool moveResolved = true;
 
     public void damagePlayer(int damage) {
 
@@ -12,9 +11,5 @@ public class Enemy : Character {
         if (!isPlayerAlive) {
             Player.Instance.die();
         }
-    }
-
-    public virtual void Move() {
-
     }
 }
