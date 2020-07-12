@@ -19,6 +19,8 @@ public class TestSpellFXScript : MonoBehaviour
         for (int i = 0; i < 4; i++) {
             Destroy(cubes[i], SpellCube.GetComponentInChildren<Animation>().clip.length);
         }
+
+        Destroy(gameObject, SpellCube.GetComponentInChildren<Animation>().clip.length);
     }
 
     // Update is called once per frame

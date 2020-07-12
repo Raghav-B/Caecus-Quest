@@ -11,9 +11,11 @@ public class GameController : MonoBehaviour
     private static Animator gameStateMachine;
     
     public GameObject Target;
+    public float spellWaitTimer = 2f;
     
     private DeckController deckController;
     private int cardIDExecute;
+    private float spellEffectTimer;
 
     public static GameController Instance { get { return instance; } }
     public static Animator GameStateMachine { get { return gameStateMachine; } }
@@ -50,9 +52,15 @@ public class GameController : MonoBehaviour
             Collider[] colliders = Physics.OverlapSphere(Target.transform.position, effect.radius);
             //Debug.Log("colliders:" + colliders.Length);
             effect.ExecuteEffect(colliders);
+            effect.CreateSpellEffect(Target.GetComponent<Transform>());
         }
 
-        GameStateMachine.SetTrigger("CardEffectEnded");
+        spellEffectTimer = Time.time;
+    }
+
+    public bool PollSpellEffect() {
+        if (Time.time < spellEffectTimer + spellWaitTimer) return false;
+        return true;
     }
 
     public void RetargetMarker() {

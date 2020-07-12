@@ -19,6 +19,7 @@ public class Player : Character {
 
         health = maxHealth;
         armor = maxArmor;
+
     }
 
     public void damageEnemy(Enemy target, float spellDamage) {

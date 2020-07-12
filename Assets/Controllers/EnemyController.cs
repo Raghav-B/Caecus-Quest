@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
         enemyList = new List<Enemy>();
         GameObject[] objList = FindObjectsOfType<GameObject>();
         foreach (GameObject obj in objList) {
-            if (obj.tag == "Enemy") enemyList.Add(obj.GetComponent<Enemy>());
+            if (obj.tag == "Enemy" && obj.activeInHierarchy) enemyList.Add(obj.GetComponent<Enemy>());
         }
 
         if (enemyList.Count == 0) return false;

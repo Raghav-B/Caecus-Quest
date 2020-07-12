@@ -14,7 +14,12 @@ public class AIResolutionState : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (EnemyController.Instance.PollAIResolved()) {
             //Debug.Log("Controller reports resolved");
-            if (Player.Instance.getHealth() <= Mathf.Epsilon) {
+
+            if (!EnemyController.Instance.UpdateEnemyList()) {
+                GameController.GameStateMachine.SetTrigger("PlayerWon");
+            }
+
+            else if (Player.Instance.getHealth() <= Mathf.Epsilon) {
                 animator.SetTrigger("PlayerDied");
             }
             
