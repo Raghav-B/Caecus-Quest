@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Net;
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour {
     public float maxHealth = 100;
@@ -14,6 +15,8 @@ public class Character : MonoBehaviour {
 
     public Vector3 targetPos;
     public bool moveResolved = true;
+
+    public Transform healthBar;
 
     void Awake() {
         health = maxHealth;
@@ -36,8 +39,20 @@ public class Character : MonoBehaviour {
         armor = newArmor;
     }
 
+    public void damageCharacter(Character target, float spellDamage) {
+        bool isCharacterAlive = target.takeDamage(spellDamage);
+        if (!isCharacterAlive) {
+            target.die();
+        }
+    }
+
     public bool takeDamage(float damage) {
         health = health - damage;
+
+        float healthRatio = health / maxHealth;
+        float newBarSize = healthRatio * 0.02f;
+        healthBar.localScale = new Vector3(newBarSize, healthBar.localScale.y, healthBar.localScale.z);
+
         if (health <= 0) {
             die();
             return false;
@@ -49,8 +64,13 @@ public class Character : MonoBehaviour {
     public void heal(float healAmount) {
         if (health + healAmount >= maxHealth) {
             health = maxHealth;
+            healthBar.localScale = new Vector3(0.02f, healthBar.localScale.y, healthBar.localScale.z);
         } else {
             health += healAmount;
+
+            float healthRatio = health / maxHealth;
+            float newBarSize = healthRatio * 0.02f;
+            healthBar.localScale = new Vector3(newBarSize, healthBar.localScale.y, healthBar.localScale.z);
         }
     }
 
