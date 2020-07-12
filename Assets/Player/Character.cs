@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Net;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -85,14 +86,14 @@ public class Character : MonoBehaviour {
             dir = moveDirections[choice];
         }
 
-        Debug.Log("Performing movement on " + transform.name);
+        //Debug.Log("Performing movement on " + transform.name);
         switch (dir) {
             case 0:
                 targetPos = transform.position + transform.forward * magnitude;
                 //transform.Translate(transform.forward * magnitude);
                 break;
             case 1:
-                targetPos = transform.position + transform.right * magnitude;
+                targetPos = transform.position + -transform.right * magnitude;
                 //transform.Translate(transform.right * magnitude);
                 break;
             case 2:
@@ -100,11 +101,35 @@ public class Character : MonoBehaviour {
                 //transform.Translate(-transform.forward * magnitude);
                 break;
             case 3:
-                targetPos = transform.position + -transform.right * magnitude;
+                targetPos = transform.position + transform.right * magnitude;
                 //transform.Translate(-transform.right * magnitude);
                 break;
         }
         moveResolved = false;
+    }
+
+    public void doMovement(Vector3 origin, int tilesToMove) {
+        Vector3 direction = transform.position - origin;
+        if (direction.magnitude < 0.5f) {
+            doMovement(-1, tilesToMove);
+            return;
+        }
+        direction.Normalize();
+        //Debug.Log(direction);
+        float angle = Vector3.Angle(Vector3.forward, direction);
+        //Debug.Log(angle);
+        int dir = (int)angle / 90;
+        switch (dir) {
+        case 0:
+            break;
+        case 1:
+            float side = Vector3.Dot(direction, Vector3.right);
+            if (side < 0) dir = 1;
+            else dir = 3;
+            break;
+        }
+        //Debug.Log(dir);
+        doMovement(dir, tilesToMove);
     }
 
     private List<int> checkAvailMoveDirections(float checkDistance) {
