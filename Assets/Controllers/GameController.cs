@@ -63,6 +63,7 @@ public class GameController : MonoBehaviour
 
     public bool PollSpellEffect() {
         if (Time.time < spellEffectTimer + spellWaitTimer) return false;
+        spellEffectTimer = Time.time;
         return true;
     }
 
