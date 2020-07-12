@@ -11,6 +11,6 @@ public abstract class CardEffect : MonoBehaviour
     }
 
     public virtual void CreateSpellEffect(Transform target) {
-        Object.Instantiate(SpellEffectContainer, target.position, target.rotation);
+        if (SpellEffectContainer != null) Object.Instantiate(SpellEffectContainer, target.position, target.rotation);
     }
 }

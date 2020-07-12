@@ -10,11 +10,12 @@ public class Character : MonoBehaviour {
     public float maxArmor = 50;
     public float armor;
 
-    private int rootTurns = 0;
+    
 
     public Vector3 targetPos;
     public bool moveResolved = true;
 
+    protected int rootTurns = 0;
     void Awake() {
         health = maxHealth;
         armor = maxArmor;
@@ -52,6 +53,10 @@ public class Character : MonoBehaviour {
         } else {
             health += healAmount;
         }
+    }
+
+    public void addRootTurn(int turns) {
+        this.rootTurns += turns;
     }
 
     public void setRootTurns(int rootTurns) {

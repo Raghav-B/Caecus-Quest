@@ -8,9 +8,7 @@ public class BasicEnemyAI : Enemy {
     public float damage = 1;
     public float moveSpeed;
 
-    private bool move = false;
-    private bool playerHit = true;
-
+    private bool isRooted;
     // Start is called before the first frame update
     void Awake() {
         health = maxHealth;
@@ -18,10 +16,16 @@ public class BasicEnemyAI : Enemy {
         targetPos = transform.position;
     }
 
+
+
     public override void Move() {
+        if (rootTurns > 0) {
+            rootTurns--;
+            return;
+        }
+
         targetPos = transform.position - Vector3.forward;
         moveResolved = false;
-        playerHit = false;
     }
 
     // Update is called once per frame

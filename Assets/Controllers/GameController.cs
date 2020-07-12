@@ -51,10 +51,10 @@ public class GameController : MonoBehaviour
         List<CardEffect> effectsList = deckController.GetCardEffects(cardIDExecute);
         foreach(CardEffect effect in effectsList) {
             //Debug.Log("Radius:" + effect.radius);
-
             Collider[] colliders = Physics.OverlapSphere(Target.transform.position, effect.radius);
             //Debug.Log("colliders:" + colliders.Length);
             effect.ExecuteEffect(colliders);
+
             effect.CreateSpellEffect(Target.GetComponent<Transform>());
         }
 

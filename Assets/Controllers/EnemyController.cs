@@ -22,6 +22,10 @@ public class EnemyController : MonoBehaviour
 
         //Debug.Log("Found enemy objects:" + enemyList.Count);
     }
+    
+    public List<Enemy> GetEnemies() {
+        return enemyList;
+    }
 
     public bool UpdateEnemyList() {
         enemyList = new List<Enemy>();
