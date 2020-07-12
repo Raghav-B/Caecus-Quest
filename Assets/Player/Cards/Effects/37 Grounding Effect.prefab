@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a1a6f2951f4fbc4d8e9fe5ba0129fa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 20
+  radius: 10
   SpellEffectContainer: {fileID: 0}
   rootPlayer: 1
   rootEnemy: 1
@@ -83,7 +83,7 @@ PrefabInstance:
     - target: {fileID: 8898507882412855318, guid: 536c7e800882fc0489012d49094e1a7b,
         type: 3}
       propertyPath: m_Name
-      value: 37 Grounding
+      value: 37 Grounding Effect
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6260216394173300126, guid: 536c7e800882fc0489012d49094e1a7b, type: 3}

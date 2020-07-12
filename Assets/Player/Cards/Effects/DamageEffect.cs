@@ -23,8 +23,8 @@ public class DamageEffect : CardEffect {
                 }
             }
         } else {
-            Debug.Log("Missed");
-            // Do nothing
+            //Debug.Log("Missed");
+            GameController.Instance.showMissAnimation();
         }
 
         Player.Instance.playerAnimator.SetTrigger("Idling");

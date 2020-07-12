@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEditor.Experimental.AssetImporters;
 using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -20,6 +21,16 @@ public class GameController : MonoBehaviour
     public static GameController Instance { get { return instance; } }
     public static Animator GameStateMachine { get { return gameStateMachine; } }
 
+    public GameObject winScreen;
+    private Color origWinScreenColor;
+    private Vector3 origWinScreenPos;
+    public GameObject lossScreen;
+    private Color origLossScreenColor;
+    private Vector3 origLossScreenPos;
+    public GameObject missedScreen;
+    private Color origMissedScreenColor;
+    private Vector3 origMissedScreenPos;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -35,12 +46,21 @@ public class GameController : MonoBehaviour
 
         GetComponent<AudioSource>().Play();
         GetComponent<AudioSource>().loop = true;
+
+        origWinScreenColor = winScreen.GetComponent<Image>().color;
+        origWinScreenPos = winScreen.transform.position;
+        origLossScreenColor = lossScreen.GetComponent<Image>().color;
+        origLossScreenPos = lossScreen.transform.position;
+        origMissedScreenColor = missedScreen.GetComponent<Image>().color;
+        origMissedScreenPos = missedScreen.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyUp(KeyCode.Space)) {
+            showLossAnimation();
+        }
     }
 
     public void SetCardIDExecute(int id) {
@@ -69,5 +89,64 @@ public class GameController : MonoBehaviour
 
     public void RetargetMarker() {
         Target.GetComponent<TargettedTileController>().changeRandomPos();
+    }
+
+    public void showWinAnimation() {
+        StartCoroutine(PopUpAnimation(winScreen, 1.5f));
+    }
+    public void showLossAnimation() {
+        StartCoroutine(PopUpAnimation(lossScreen, 1.5f));
+    }
+    public void showMissAnimation() {
+        StartCoroutine(PopUpAnimation(missedScreen, 0.5f));
+    }
+
+    IEnumerator PopUpAnimation(GameObject objectToPop, float hoverSeconds) {
+        objectToPop.SetActive(true);
+        objectToPop.transform.localScale = new Vector3(0, 0, 0);
+
+        if (objectToPop.Equals(winScreen)) {
+            objectToPop.GetComponent<Image>().color = origWinScreenColor;
+            objectToPop.transform.position = origWinScreenPos;
+        } else if (objectToPop.Equals(lossScreen)) {
+            objectToPop.GetComponent<Image>().color = origLossScreenColor;
+            objectToPop.transform.position = origLossScreenPos;
+        } else if (objectToPop.Equals(missedScreen)) {
+            objectToPop.GetComponent<Image>().color = origMissedScreenColor;
+            objectToPop.transform.position = origMissedScreenPos;
+        }
+
+        while (objectToPop.transform.localScale.x < 1f &&
+                    objectToPop.transform.localScale.y < 1f &&
+                    objectToPop.transform.localScale.z < 1f) {
+            objectToPop.transform.localScale = new Vector3(
+                    objectToPop.transform.localScale.x + 0.03f,
+                    objectToPop.transform.localScale.y + 0.03f,
+                    objectToPop.transform.localScale.z + 0.03f);
+            yield return new WaitForSeconds(0.005f);
+        }
+
+        float timeRemaining = hoverSeconds;
+        while (timeRemaining > 0) {
+            objectToPop.transform.position = new Vector3(
+                    objectToPop.transform.position.x,
+                    objectToPop.transform.position.y + 1,
+                    objectToPop.transform.position.z);
+            timeRemaining -= 0.01f;
+            yield return new WaitForSeconds(0.01f);
+        }
+
+        StartCoroutine(FadeAnimation(objectToPop));
+    }
+
+    IEnumerator FadeAnimation(GameObject objectToFade) {   
+        while (objectToFade.GetComponent<Image>().color.a > 0) {
+            objectToFade.GetComponent<Image>().color = new Color(
+                    objectToFade.GetComponent<Image>().color.r,
+                    objectToFade.GetComponent<Image>().color.g,
+                    objectToFade.GetComponent<Image>().color.b,
+                    objectToFade.GetComponent<Image>().color.a - 0.1f);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
