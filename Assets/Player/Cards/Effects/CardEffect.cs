@@ -13,4 +13,8 @@ public abstract class CardEffect : MonoBehaviour
     public virtual void CreateSpellEffect(Transform target) {
         if (SpellEffectContainer != null) Object.Instantiate(SpellEffectContainer, target.position, target.rotation);
     }
+
+    public virtual void CreateSpellEffect() {
+        CreateSpellEffect(GameController.Instance.Target.GetComponent<Transform>());
+    }
 }

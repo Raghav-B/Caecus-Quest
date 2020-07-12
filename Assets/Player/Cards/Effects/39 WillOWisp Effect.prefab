@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4475625a400de0941bb5d4c04a2f7a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1.5
-  SpellEffectContainer: {fileID: 0}
+  radius: 0.5
+  SpellEffectContainer: {fileID: 6390246889256754326, guid: fa7144fd2c3224745ac7308f423ff4e1,
+    type: 3}
   damage: 10
   targets: 2
 --- !u!1001 &1707215936159824533
