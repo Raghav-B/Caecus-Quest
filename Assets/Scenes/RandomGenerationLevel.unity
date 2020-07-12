@@ -1083,7 +1083,7 @@ PrefabInstance:
         type: 3}
       propertyPath: CardList.Array.data[19]
       value: 
-      objectReference: {fileID: 4057934719891699096, guid: 939b6ae47e124ad4b826e6ccd3ba5755,
+      objectReference: {fileID: 1503263903946521265, guid: a7a7b1a4b804bb0428c6ce08cd7dedc4,
         type: 3}
     - target: {fileID: 4447402249840428309, guid: a14c10204ba1ee344a6cd52e4e2fadcc,
         type: 3}

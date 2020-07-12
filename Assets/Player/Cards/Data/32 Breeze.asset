@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 32 Breeze
   m_EditorClassIdentifier: 
   cardID: 32
-  cardName: Movement
+  cardName: Breeze
   rarity: 0
-  description: Move objects 1 tile in a random direction
+  description: Move everything 1 tile in a random direction in a wide area
   splashArt: {fileID: 21300000, guid: 5f50e21043acf1b4bbccf27aed569128, type: 3}
   character: {fileID: 0}

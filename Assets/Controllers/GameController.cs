@@ -1,9 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.Experimental.AssetImporters;
-using UnityEditorInternal;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
@@ -152,6 +150,7 @@ public class GameController : MonoBehaviour
         }
 
         StartCoroutine(FadeAnimation(objectToPop));
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator FadeAnimation(GameObject objectToFade) {   

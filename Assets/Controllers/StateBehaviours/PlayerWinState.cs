@@ -7,7 +7,7 @@ public class PlayerWinState : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        GameController.Instance.showWinAnimation();    
+        GameController.Instance.showWinAnimation();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
