@@ -25,13 +25,6 @@ public class Player : Character {
         playerAnimator.SetTrigger("Idling");
     }
 
-    public void damageEnemy(Enemy target, float spellDamage) {
-        bool isEnemyAlive = target.takeDamage(spellDamage);
-        if (!isEnemyAlive) {
-            target.die();
-        }
-    }
-
     public override void die() {
         playerAnimator.SetTrigger("Dead");
         playerAnimator.ResetTrigger("Idling");
