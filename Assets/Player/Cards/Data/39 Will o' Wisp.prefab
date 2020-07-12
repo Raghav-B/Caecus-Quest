@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1883910358467786778, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_Name
-      value: 04 Will o' Wisp
+      value: 39 Will o' Wisp
       objectReference: {fileID: 0}
     - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
@@ -27,7 +27,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cardEffects.Array.data[0]
       value: 
-      objectReference: {fileID: 3930745335030234933, guid: 135915a07efcb744b99d7865a706949b,
+      objectReference: {fileID: 6741554278718794712, guid: e146216f69b3fd044b1340f057f66e7e,
         type: 3}
     - target: {fileID: 3990932402454220476, guid: a8771885464984b499a3e4110ee66747,
         type: 3}

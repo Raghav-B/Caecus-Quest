@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba09364f0f2296409601a55fbb0a47a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 1
+  radius: 2
   SpellEffectContainer: {fileID: 7143187551907661976, guid: c57f1ebed3ef6404680a3ae20603d796,
     type: 3}
   damage: 40
-  chanceToHit: 0.2
+  chanceToHit: 1
 --- !u!1001 &5905834500772817647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_Name
-      value: 05 Stronger Fireball Effect
+      value: 36 Stronger Fireball Effect
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}

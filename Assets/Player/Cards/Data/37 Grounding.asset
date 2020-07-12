@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fd922c1790c0d134890c2894ef290ee9, type: 3}
-  m_Name: 03 Fireball
+  m_Name: 37 Grounding
   m_EditorClassIdentifier: 
-  cardID: 3
-  cardName: Fireball
+  cardID: 37
+  cardName: Grounding
   rarity: 0
-  description: Deal 20 dmg
-  splashArt: {fileID: 21300000, guid: fc04ecb2ec5e9804abcbddb9ffd6d05d, type: 3}
+  description: Stuns the entire map for 1 turn
+  splashArt: {fileID: 0}
   character: {fileID: 0}

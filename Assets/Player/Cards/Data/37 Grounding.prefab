@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6489817856392762334
+--- !u!1001 &1257885661266365486
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1883910358467786778, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: m_Name
-      value: 30 Root (New)
+      value: 37 Grounding
       objectReference: {fileID: 0}
     - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
@@ -21,13 +21,13 @@ PrefabInstance:
         type: 3}
       propertyPath: cardEffects.Array.data[0]
       value: 
-      objectReference: {fileID: 588982708140421242, guid: d12a26d83ae2d0246b009b7278c1ce38,
+      objectReference: {fileID: 7083124006654673718, guid: be0b81edddff8e046922acdc9e077f04,
         type: 3}
     - target: {fileID: 3966420626016634392, guid: a8771885464984b499a3e4110ee66747,
         type: 3}
       propertyPath: cardInfo
       value: 
-      objectReference: {fileID: 11400000, guid: 05e22adf835d5fc40b977e6487d8a818,
+      objectReference: {fileID: 11400000, guid: 2ea4543736951094080b55ca0996a34a,
         type: 2}
     - target: {fileID: 3990932402454220476, guid: a8771885464984b499a3e4110ee66747,
         type: 3}

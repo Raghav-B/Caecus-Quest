@@ -1,23 +1,22 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-676638379428497955
+--- !u!114 &6741554278718794712
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927883050348471169}
+  m_GameObject: {fileID: 3298494330984587603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ba09364f0f2296409601a55fbb0a47a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4475625a400de0941bb5d4c04a2f7a88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 0.5
-  SpellEffectContainer: {fileID: 7143187551907661976, guid: c57f1ebed3ef6404680a3ae20603d796,
-    type: 3}
-  damage: 20
-  chanceToHit: 1
---- !u!1001 &2357233825925085255
+  SpellEffectContainer: {fileID: 0}
+  damage: 10
+  targets: 2
+--- !u!1001 &1707215936159824533
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -27,22 +26,22 @@ PrefabInstance:
     - target: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_Name
-      value: 03 Fireball Effect
+      value: 39 WillOWisp Effect
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 326.0579
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 68.457756
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -103.22606
       objectReference: {fileID: 0}
     - target: {fileID: 9121845423709352347, guid: 294e5e475afb6e14b9fe5699b806bc12,
         type: 3}
@@ -84,12 +83,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 6332402779375489303, guid: 294e5e475afb6e14b9fe5699b806bc12, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 294e5e475afb6e14b9fe5699b806bc12, type: 3}
---- !u!1 &1927883050348471169 stripped
+--- !u!1 &3298494330984587603 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4213017152884104134, guid: 294e5e475afb6e14b9fe5699b806bc12,
     type: 3}
-  m_PrefabInstance: {fileID: 2357233825925085255}
+  m_PrefabInstance: {fileID: 1707215936159824533}
   m_PrefabAsset: {fileID: 0}
